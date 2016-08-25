@@ -289,6 +289,8 @@ img.subwaySigns{
 }
 img.ChaoticSigns{
 	background-image: url("assets/ChaoticSigns.jpg");
+	width:487px;
+	height:295px;
 }
 
 .caption{
