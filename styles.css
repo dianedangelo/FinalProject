@@ -1,40 +1,67 @@
-h1, p, h2, nav, li {
+h1, p, h2, nav, li, h2 {
 	font-family:helvetica;
 }
 
 body{
 	margin:0;
+	/*overflow-x:hidden;*/
 }
 
 header{
 	width:250px;
-	/*height:100%;*/
 	position:absolute;
 	left:0;
 	top:0;
+	bottom:0;
 	padding:20px;
 	color:white;
 	background-color:rgb(191,0,37);
 	text-align:center;
+	z-index:1;
 }
+
+h2{
+	padding-top:20px;
+}
+
+#left {
+  width:250px;
+  position:absolute;
+  text-align:center;
+  z-index:1;
+}
+
+#left-wallpaper {
+  position: fixed;
+  background-color:rgb(191,0,37);
+  content: "";
+  top:0;
+  left:0;
+  bottom:0;
+  width:290px;
+}
+
 
 main{
 	width:750px;
 	font-family:helvetica;
 	font-size:16px;
 	line-height:20px;
+/*	text-indent:60px;*/
 	position:absolute;
 	top:200px;
-	left:550px;
+	left:450px;
 }
-
+p{
+	font-size:15px;
+	letter-spacing:1px;
+}
 
 hr{
 	color:white;
     margin: 0;
     padding:0;
 }
-
 
 
 @font-face {
@@ -54,7 +81,7 @@ hr{
 .helveticaHLBold{
 	position:absolute;
 	top:40px;
-	left:550px;
+	left:450px;
 	font-family:"HelveticaHLbold";
 	font-size:190px;
 	color:rgba(220,220,220,.85);
@@ -67,7 +94,7 @@ hr{
 .helveticaHLNorm{
 	position:absolute;
 	top:-60px;
-	left:550px;
+	left:450px;
 	font-family:"HelveticaHLNorm";
 	font-size:190px;
 	color:rgba(220,220,220,.65);
@@ -81,7 +108,7 @@ hr{
 .helveticaHLLight{
 	position:absolute;
 	top:-100px;
-	left:550px;
+	left:450px;
 	font-family:"HelveticaHLLight";
 	font-size:190px;
 	color:rgba(220,220,220,.20);
@@ -95,26 +122,23 @@ hr{
 .helveticaHLUltraLight{
 	position:absolute;
 	top:-130px;
-	left:550px;
+	left:455px;
 	font-family:"HelveticaHLUltraLight";
 	font-size:190px;
-	color:rgba(220,220,220,.10);
+	color:rgba(220,220,220,.19);
 }
 
 
 h1.subhead{
 	position:absolute;
 	top:380px;
-	left:500px;
+	left:405px;
 }
 
-
-
-
-
-
-
-
+h2 {
+	font-size:22px;
+	font-weight:bold;
+}
 
 nav {
 	width:35px;
@@ -124,8 +148,9 @@ nav {
 	left:290px;
 	background-color:rgb(162,0,21);
 	margin:0;
-	padding:0;
+	padding-top:17px;
 	box-shadow: 5px 0px 6px #4d0019 inset;
+	text-decoration: none;
 }
 
 ul {
@@ -138,20 +163,37 @@ ul {
 	padding-top:17px;
 	padding-bottom:0px;
 	float:left;
+	text-decoration: none;
+	backface-visibility: visible;
+   cursor:pointer;
+   margin:0;
+   background-color: rgba(191,0,37,0);
+   transition: all .3s linear;
+   overflow-x:hidden;
 }
 .box span{
 	opacity:0;
 	transition:opacity .2s linear;
 }
-
-.box:hover span{
+/*my old code*/
+/*.box:hover span{
 	opacity:1;
 
-}
+}*/
 
+/*cams fix*/
+.box:hover {
+  width:inherit;
+  padding-right:17px;
+  background-color: rgba(191,0,37,1);
+ }
+
+ .box:hover span{
+  opacity:1;
+ }
 
 li{
-	width:40px;
+	/*width:40px;*/
 	font-size:20px;
 	font-weight:lighter;
 	color:white;
@@ -178,6 +220,11 @@ li{
  	line-height:16px;
 }
 
+.caps:hover{
+	color:rgb(0,0,0);
+	cursor:pointer;
+}
+
 
 a:link {
     background-color: transparent;
@@ -188,8 +235,8 @@ a:visited {
     text-decoration: none;
 }
 
-
-li:hover {
+/*my old code*/
+/*li:hover {
 	width:170px;
 	height:40px;
     color:white;
@@ -201,13 +248,52 @@ li:hover {
 }
 
 li {
-	transition: width 1s linear; 
+	transition: width .1s linear; 
+
+}*/
+
+@font-face {
+    font-family: "figcaption";
+    src: url("fonts/Helvetica-LightOblique.ttf") format("truetype");
+}
+figcaption{
+	width:100%;
+	font-family:"figcaption";
+	font-size:15px;
+	padding-bottom:20px;
+}
+
+#map{
+	width:700px;
+	height:400px;
+	border: 1px solid black;
+	float:left;
+}
+
+.image1{
+/*	position:absolute;*/
+	float:left;
+	padding-right:15px;
+	margin:0,10px,10px,0; 
 
 }
 
+img {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+}
 
+img.subwaySigns{
+	background-image: url("assets/firstSigns.jpg");
+}
+img.ChaoticSigns{
+	background-image: url("assets/ChaoticSigns.jpg");
+}
 
-
+.caption{
+	padding-top:10px;
+}
 
 
 /*AAAAAAA*/
@@ -222,7 +308,7 @@ li {
 
 .letterCaptionA{
 	font-family:"HelveticaUltraLt";
-	/*line-height:10px;*/
+	letter-spacing: 2px;
 }
 
 /*B*/
@@ -233,12 +319,12 @@ li {
 
 .letterB{
 	font-family:"HelveticaUltraLtIt";
-	/*line-height:200px;*/
 }
 
 .letterCaptionB{
 	font-family:"HelveticaUltraLtIt";
-		line-height:30px;
+	line-height:30px;
+	letter-spacing: 2px;
 }
 /*C*/
 @font-face {
@@ -253,7 +339,7 @@ li {
 
 .letterCaptionC{
 	font-family:"HelveticaThin";
-	/*line-height:10px;*/
+	letter-spacing: 2px;
 
 }
 /*D*/
@@ -271,6 +357,7 @@ li {
 .letterCaptionD{
 	font-family:"HelveticaThinItal";
 	line-height:30px;
+	letter-spacing: 2px;
 }
 
 /*E*/
@@ -287,9 +374,10 @@ li {
 
 .letterCaptionE{
 	font-family:"HelveticaLt";
-	line-height:40px;
+	line-height:30px;
 	padding:0;
 	margin:0;
+	letter-spacing: 2px;
 }
 
 /*F*/
@@ -300,11 +388,14 @@ li {
 
 .letterF{
 	font-family:"HelveticaLtItal";
+	line-height:160px;
 }
 
 .letterCaptionF{
 	font-family:"HelveticaLtItal";
 	vertical-align:top;
+	line-height:5px;
+	letter-spacing: 2px;
 }
 
 /*G*/
@@ -315,10 +406,12 @@ li {
 
 .letterG{
 	font-family:"HelveticaReg";
+	line-height:170px;
 }
 
 .letterCaptionG{
 	font-family:"HelveticaReg";
+	letter-spacing: 2px;
 }
 
 /*H*/
@@ -330,10 +423,12 @@ li {
 
 .letterH{
 	font-family:"HelveticaItal";
+	line-height:180px;
 }
 
 .letterCaptionH{
 	font-family:"HelveticaItal";
+	letter-spacing: 2px;
 }
 
 /*I*/
@@ -349,6 +444,7 @@ li {
 
 .letterCaptionI{
 	font-family:"HelveticaMed";
+	letter-spacing: 2px;
 }
 
 /*J*/
@@ -360,10 +456,12 @@ li {
 
 .letterJ{
 	font-family:"HelveticaMedItal";
+	line-height:170px;
 }
 
 .letterCaptionJ{
 	font-family:"HelveticaMedItal";
+	letter-spacing: 2px;
 }
 
 
@@ -378,6 +476,7 @@ li {
 
 .letterCaptionK{
 	font-family:"HelveticaBold";
+	letter-spacing: 2px;
 }
 
 
@@ -390,10 +489,13 @@ li {
 .letterL{
 	font-family:"HelveticaBoldItal";
 	padding-top:0;
+		line-height:230px;
 }
 
 .letterCaptionL{
 	font-family:"HelveticaBoldItal";
+	line-height:70px;
+	letter-spacing: 2px;
 }
 
 
@@ -406,10 +508,13 @@ li {
 
 .letterM{
 	font-family:"HelveticaBlk";
+		line-height:180px;
 }
 
 .letterCaptionM{
 	font-family:"HelveticaBlk";
+	letter-spacing: 2px;
+	line-height:0px;
 }
 
 
@@ -427,6 +532,7 @@ li {
 
 .letterCaptionN{
 	font-family:"HelveticaBlkItal";
+	letter-spacing: 2px;
 }
 
 /*O*/
@@ -441,6 +547,8 @@ li {
 
 .letterCaptionO{
 	font-family:"HelveticaCondLt";
+	letter-spacing: 2px;
+	line-height:30px;
 }
 
 
@@ -457,6 +565,8 @@ li {
 
 .letterCaptionP{
 	font-family:"HelveticaCondLtItal";
+	letter-spacing: 2px;
+	line-height:30px;
 }
 
 
@@ -472,6 +582,8 @@ li {
 
 .letterCaptionQ{
 	font-family:"HelveticaCond";
+	letter-spacing: 2px;
+	line-height:30px;
 }
 
 /*R*/
@@ -486,6 +598,7 @@ li {
 
 .letterCaptionR{
 	font-family:"HelveticaCondItal";
+	letter-spacing: 2px;
 }
 
 
@@ -501,6 +614,8 @@ li {
 
 .letterCaptionS{
 	font-family:"HelveticaCondBold";
+	letter-spacing: 2px;
+	line-height:30px;
 }
 
 
@@ -516,6 +631,8 @@ li {
 
 .letterCaptionT{
 	font-family:"HelveticaCondBoldItal";
+	letter-spacing: 2px;
+	line-height:30px;
 }
 
 
@@ -531,6 +648,8 @@ li {
 
 .letterCaptionU{
 	font-family:"HelveticaExtLt";
+	letter-spacing: 2px;
+	line-height:30px;
 }
 
 
@@ -546,6 +665,8 @@ li {
 
 .letterCaptionV{
 	font-family:"HelveticaExtItalLt";
+	letter-spacing: 2px;
+	line-height:30px;
 }
 
 /*W*/
@@ -560,6 +681,7 @@ li {
 
 .letterCaptionW{
 	font-family:"HelveticaExtMed";
+	letter-spacing: 2px;
 }
 
 /*X*/
@@ -574,6 +696,7 @@ li {
 
 .letterCaptionX{
 	font-family:"HelveticaExtMedItal";
+	letter-spacing: 2px;
 }
 
 
@@ -589,6 +712,7 @@ li {
 
 .letterCaptionY{
 	font-family:"HelveticaExtHeavy";
+	letter-spacing: 2px;
 }
 
 
@@ -604,6 +728,7 @@ li {
 
 .letterCaptionZ{
 	font-family:"HelveticaExtBlackItal";
+	letter-spacing: 2px;
 }
 
 
