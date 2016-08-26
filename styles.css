@@ -43,11 +43,10 @@ h2{
 
 
 main{
-	width:750px;
+	width:800px;
 	font-family:helvetica;
 	font-size:16px;
 	line-height:20px;
-/*	text-indent:60px;*/
 	position:absolute;
 	top:200px;
 	left:450px;
@@ -193,7 +192,6 @@ ul {
  }
 
 li{
-	/*width:40px;*/
 	font-size:20px;
 	font-weight:lighter;
 	color:white;
@@ -268,14 +266,77 @@ figcaption{
 	height:400px;
 	border: 1px solid black;
 	float:left;
+	margin-bottom:20px;
 }
 
 .image1{
-/*	position:absolute;*/
 	float:left;
 	padding-right:15px;
 	margin:0,10px,10px,0; 
 
+}
+
+.image2{
+	float:right;
+	padding-left:10px;
+	margin:0,10px,10px,15px; 
+
+}
+
+.content{
+	/*width:400px;
+	height:300px;*/
+	overflow:hidden;
+}
+
+.fulton{
+	width:300px; 
+	height:200px;
+	background-image: url("assets/FultonStreetSta.jpg");
+		background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+		overflow:hidden;
+}
+
+.wall{
+	width:300px; 
+	height:150px;
+	background-image: url("assets/WallStreet.jpg");
+		background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+		overflow:hidden;
+}
+
+.w34th{
+	width:300px; 
+	height:200px;
+	background-image: url("assets/34thStreet.jpg");
+		background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+		overflow:hidden;
+}
+
+.lex{
+	width:300px; 
+	height:200px;
+	background-image: url("assets/Lex53rd2.jpg");
+		background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+		overflow:hidden;
+}
+
+.w42nd{
+	width:300px; 
+	height:200px;
+	background-image: url("assets/42ndStreet.jpg");
+		background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+		overflow:hidden;
 }
 
 img {
@@ -284,13 +345,37 @@ img {
 	background-size: 100%;
 }
 
-img.subwaySigns{
+.subwaySigns{
 	background-image: url("assets/firstSigns.jpg");
+		background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
 }
-img.ChaoticSigns{
+.ChaoticSigns{
 	background-image: url("assets/ChaoticSigns.jpg");
-	width:487px;
-	height:295px;
+}
+
+.moviePoster{
+	background-image: url("assets/moviePoster.jpg");
+	/*background-size:80%;*/
+	}
+
+.firstNewSigns{
+	background-image:url("assets/firstNewSigns.jpg");
+}
+
+.GraphicStandards{
+	background-image:url("assets/GraphicStandards.jpg");
+	height:180px;
+	width:400px;
+}
+
+.Lex53rd{
+	background-image:url("assets/Lex53rd.jpg");
+}
+
+.NewSubwaySigns{
+	background-image:url("assets/NewSubwaySigns.jpg");
 }
 
 .caption{
